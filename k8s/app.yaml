@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastforwardsport-cms
+  namespace: __NS__
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastforwardsport-cms
+  template:
+    metadata:
+      labels:
+        app: fastforwardsport-cms
+    spec:
+      imagePullSecrets:
+        - name: ghcr-pull
+      containers:
+        - name: app
+          image: ghcr.io/taro-common/farstforward-cms:__TAG__
+          ports:
+            - containerPort: 1337
+          envFrom:
+            - secretRef:
+                name: fastforwardsport-secret
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "500m"
+              memory: "1024Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastforwardsport-cms
+  namespace: __NS__
+spec:
+  type: ClusterIP
+  selector:
+    app: fastforwardsport-cms
+  ports:
+    - name: http
+      port: 80
+      targetPort: 1337
