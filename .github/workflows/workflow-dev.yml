@@ -2,6 +2,10 @@ name: Deployment Dev
 
 on: [push]
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   Build:
     if: github.ref == 'refs/heads/dev'
