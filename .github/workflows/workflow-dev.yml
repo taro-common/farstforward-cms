@@ -75,7 +75,7 @@ jobs:
             head -n 5 /tmp/farstforward-dev-ingress.yaml
 
             microk8s kubectl apply -f /tmp/farstforward-dev-app.yaml
-            microk8s kubectl -n tongla-dev rollout status deployment/farstforward-backend --timeout=5m
+            microk8s kubectl -n tongla-dev rollout status deployment/fastforwardsport-cms --timeout=5m
 
             microk8s kubectl apply -f /tmp/farstforward-dev-ingress.yaml
             microk8s kubectl -n tongla-dev describe ingress farstforward-cms
