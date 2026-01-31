@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "customField",
+      "customField": "plugin::auto-locales-slug.auto-locales-slug",
+      "required": true,
+      "options": {
+        "pattern": "title"
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzExMTM1OTksImp0aSI6IjAxOWNjMGZlLTFhYzUtNGIwMC04OWEwLWQyMGZlYTMwOTFhMiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6IjRjMDRjNTFiIn0.F6o2pAUNy75N7_mCHL9ztPdbfK8JQ5BI8JwUDR2Yqf_7zXWKLzPoAOIQ6_-P6NqO2osrW3oDy4SVzzuUJ8bqIQ",
+        "preset": "rich"
+      }
+    },
+    "view": {
+      "type": "integer",
+      "required": false,
+      "default": 0
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    }
+  }
+}

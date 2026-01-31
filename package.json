@@ -15,13 +15,20 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^1.1.1",
     "@strapi/plugin-cloud": "5.34.0",
     "@strapi/plugin-users-permissions": "5.34.0",
+    "@strapi/provider-email-nodemailer": "^5.34.0",
+    "@strapi/provider-upload-aws-s3": "^5.34.0",
     "@strapi/strapi": "5.34.0",
     "mysql2": "3.9.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-auto-locales-slug": "^0.0.4",
+    "strapi-plugin-preview-button": "^3.0.2",
+    "strapi-plugin-publisher": "^2.0.5",
+    "strapi-plugin-webp-converter": "^1.0.4",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
