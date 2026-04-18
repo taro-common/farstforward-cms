@@ -1,14 +1,15 @@
-name: Deployment Dev
-
-on: [push]
-
 permissions:
   contents: read
   packages: write
 
+name: Build Workflow
+
+on: [push]
+
 jobs:
+
   Build:
-    if: github.ref == 'refs/heads/dev'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -16,66 +17,16 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t ghcr.io/taro-common/farstforward-cms:dev-${{ github.sha }} .
+          docker build -t ghcr.io/taro-common/farstforward-cms:${{ github.sha }} .
 
       - name: Login to GHCR
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Push image
         run: |
-          docker push ghcr.io/taro-common/farstforward-cms:dev-${{ github.sha }}
+          docker push ghcr.io/taro-common/farstforward-cms:${{ github.sha }}
 
       - name: Tag latest
         run: |
-          docker tag ghcr.io/taro-common/farstforward-cms:dev-${{ github.sha }} ghcr.io/taro-common/farstforward-cms:dev
-          docker push ghcr.io/taro-common/farstforward-cms:dev
-
-  Deploy:
-    if: github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
-    needs: Build
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Render manifests
-        run: |
-          set -e
-          TAG=dev-${{ github.sha }}
-          HOST=farstforward-cms-demo.fastforwardsport.com
-          NS=tongla-dev
-          mkdir -p .rendered
-          sed "s|__TAG__|${TAG}|g; s|__NS__|${NS}|g; s|__HOST__|${HOST}|g" k8s/app.yaml > .rendered/app.yaml
-          sed "s|__TAG__|${TAG}|g; s|__NS__|${NS}|g; s|__HOST__|${HOST}|g" k8s/ingress.yaml > .rendered/ingress.yaml
-
-      - name: Encode manifests as base64
-        run: |
-          set -e
-          echo "APP_YAML_B64=$(base64 -w0 .rendered/app.yaml)" >> $GITHUB_ENV
-          echo "INGRESS_YAML_B64=$(base64 -w0 .rendered/ingress.yaml)" >> $GITHUB_ENV
-
-      - name: Apply to microk8s
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_SSH_PORT }}
-          command_timeout: 30m
-          envs: APP_YAML_B64,INGRESS_YAML_B64
-          script: |
-            set -e
-            TAG=dev-${{ github.sha }}
-            
-            echo "$APP_YAML_B64" | base64 -d > /tmp/farstforward-dev-app.yaml
-            echo "$INGRESS_YAML_B64" | base64 -d > /tmp/farstforward-dev-ingress.yaml
-
-            wc -c /tmp/farstforward-dev-app.yaml /tmp/farstforward-dev-ingress.yaml
-            head -n 5 /tmp/farstforward-dev-app.yaml
-            head -n 5 /tmp/farstforward-dev-ingress.yaml
-
-            microk8s kubectl apply -f /tmp/farstforward-dev-app.yaml
-            microk8s kubectl -n tongla-dev rollout status deployment/fastforwardsport-cms --timeout=5m
-
-            microk8s kubectl apply -f /tmp/farstforward-dev-ingress.yaml
-            microk8s kubectl -n tongla-dev describe ingress farstforward-cms
+          docker tag ghcr.io/taro-common/farstforward-cms:${{ github.sha }} ghcr.io/taro-common/farstforward-cms:latest
+          docker push ghcr.io/taro-common/farstforward-cms:latest
