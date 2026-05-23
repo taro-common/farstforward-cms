@@ -554,7 +554,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          licenseKey: "GPL";
           output: "HTML";
           preset: "standard";
         }
@@ -563,7 +563,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          licenseKey: "GPL";
           output: "HTML";
           preset: "standard";
         }
@@ -623,7 +623,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          licenseKey: "GPL";
           output: "HTML";
           preset: "standard";
         }
@@ -632,7 +632,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          licenseKey: "GPL";
           output: "HTML";
           preset: "standard";
         }
