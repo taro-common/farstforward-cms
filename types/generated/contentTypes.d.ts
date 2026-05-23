@@ -556,7 +556,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         {
           licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
-          preset: "standard";
+          preset: "light";
         }
       >;
     content_th: Schema.Attribute.RichText &
@@ -565,7 +565,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         {
           licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
-          preset: "standard";
+          preset: "light";
         }
       >;
     createdAt: Schema.Attribute.DateTime;
@@ -618,7 +618,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
         {
           licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
-          preset: "standard";
+          preset: "light";
         }
       >;
     content_th: Schema.Attribute.RichText &
@@ -627,7 +627,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
         {
           licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
-          preset: "standard";
+          preset: "light";
         }
       >;
     createdAt: Schema.Attribute.DateTime;
