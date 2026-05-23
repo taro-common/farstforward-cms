@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_galleries",
+  "info": {
+    "singularName": "our-gallery",
+    "pluralName": "our-galleries",
+    "displayName": "Our gallery"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_th": {
+      "type": "string",
+      "required": true
+    },
+    "title_en": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::our-gallery-tag.our-gallery-tag"
+    }
+  }
+}

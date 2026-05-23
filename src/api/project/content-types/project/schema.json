@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "content-manager": {
+          "visible": false
+        }
+      }
+    },
+    "title_th": {
+      "type": "string",
+      "required": true
+    },
+    "title_en": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "customField",
+      "customField": "plugin::auto-locales-slug.auto-locales-slug",
+      "required": true,
+      "options": {
+        "pattern": "title"
+      }
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::our-gallery-tag.our-gallery-tag"
+    },
+    "description_th": {
+      "type": "text"
+    },
+    "description_en": {
+      "type": "text"
+    },
+    "content_th": {
+      "type": "customField",
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "preset": "standard",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg"
+      }
+    },
+    "content_en": {
+      "type": "customField",
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg",
+        "preset": "standard"
+      }
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    }
+  }
+}

@@ -430,33 +430,154 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
-  collectionName: "blogs";
+export interface ApiContactContact extends Struct.SingleTypeSchema {
+  collectionName: "contacts";
   info: {
-    displayName: "Blog";
-    pluralName: "blogs";
-    singularName: "blog";
+    displayName: "Contact";
+    pluralName: "contacts";
+    singularName: "contact";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    address_en: Schema.Attribute.Text;
+    address_th: Schema.Attribute.Text;
+    business_hours_en: Schema.Attribute.Text;
+    business_hours_th: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    fackbook_url: Schema.Attribute.String;
+    google_map_url: Schema.Attribute.String;
+    instagram_url: Schema.Attribute.String;
+    line_id: Schema.Attribute.String;
+    line_url: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::contact.contact"
+    > &
+      Schema.Attribute.Private;
+    location_lat: Schema.Attribute.String;
+    location_long: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    tiktok_url: Schema.Attribute.String;
+    twitter_url: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    whatsapp_url: Schema.Attribute.String;
+    youtube_url: Schema.Attribute.String;
+  };
+}
+
+export interface ApiOurGalleryTagOurGalleryTag
+  extends Struct.CollectionTypeSchema {
+  collectionName: "our_gallery_tags";
+  info: {
+    displayName: "Tag";
+    pluralName: "our-gallery-tags";
+    singularName: "our-gallery-tag";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::our-gallery-tag.our-gallery-tag"
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tag_en: Schema.Attribute.String;
+    tag_th: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOurGalleryOurGallery extends Struct.CollectionTypeSchema {
+  collectionName: "our_galleries";
+  info: {
+    displayName: "Our gallery";
+    pluralName: "our-galleries";
+    singularName: "our-gallery";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<"images" | "files" | "videos" | "audios"> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::our-gallery.our-gallery"
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tag: Schema.Attribute.Relation<
+      "oneToOne",
+      "api::our-gallery-tag.our-gallery-tag"
+    >;
+    title_en: Schema.Attribute.String & Schema.Attribute.Required;
+    title_th: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProjectProject extends Struct.CollectionTypeSchema {
+  collectionName: "projects";
+  info: {
+    displayName: "Project";
+    pluralName: "projects";
+    singularName: "project";
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.RichText &
+    content_en: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzExMTM1OTksImp0aSI6IjAxOWNjMGZlLTFhYzUtNGIwMC04OWEwLWQyMGZlYTMwOTFhMiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6IjRjMDRjNTFiIn0.F6o2pAUNy75N7_mCHL9ztPdbfK8JQ5BI8JwUDR2Yqf_7zXWKLzPoAOIQ6_-P6NqO2osrW3oDy4SVzzuUJ8bqIQ";
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
           output: "HTML";
-          preset: "rich";
+          preset: "standard";
+        }
+      >;
+    content_th: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor.CKEditor",
+        {
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          output: "HTML";
+          preset: "standard";
         }
       >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<"images" | "files">;
+    description_en: Schema.Attribute.Text;
+    description_th: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<"oneToMany", "api::blog.blog"> &
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::project.project"
+    > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<"seo.seo", false>;
@@ -468,13 +589,92 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
           pattern: "title";
         }
       >;
+    tag: Schema.Attribute.Relation<
+      "oneToOne",
+      "api::our-gallery-tag.our-gallery-tag"
+    >;
     title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
+      Schema.Attribute.SetPluginOptions<{
+        "content-manager": {
+          visible: false;
+        };
+      }>;
+    title_en: Schema.Attribute.String & Schema.Attribute.Required;
+    title_th: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
-    view: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+  };
+}
+
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+  collectionName: "services";
+  info: {
+    displayName: "Service";
+    pluralName: "services";
+    singularName: "service";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    action: Schema.Attribute.Component<"call-to-action.call-to-action", false>;
+    content_en: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor.CKEditor",
+        {
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          output: "HTML";
+          preset: "standard";
+        }
+      >;
+    content_th: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor.CKEditor",
+        {
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MDE0Mzk5OTksImp0aSI6IjdmNzVmOTRlLTgwNDgtNGU4My05NWNlLTMyMmE2YzJkMjYwMCIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiJjYWE1NTQxNiJ9.t5OvtYuN_cWXVqgCUpVp32YU54ZFf3X44pqqQGwWE_s8Vr8tBloWROKo-hljakhRYQIDujkSgRbKlz4yJAPXgg";
+          output: "HTML";
+          preset: "standard";
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    description_en: Schema.Attribute.String;
+    description_th: Schema.Attribute.String;
+    has_action_button: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::service.service"
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<"seo.seo", false>;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        "plugin::auto-locales-slug.auto-locales-slug",
+        {
+          pattern: "title";
+        }
+      >;
+    tag: Schema.Attribute.Relation<
+      "oneToOne",
+      "api::our-gallery-tag.our-gallery-tag"
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        "content-manager": {
+          visible: false;
+        };
+      }>;
+    title_en: Schema.Attribute.String & Schema.Attribute.Required;
+    title_th: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1028,7 +1228,11 @@ declare module "@strapi/strapi" {
       "admin::transfer-token": AdminTransferToken;
       "admin::transfer-token-permission": AdminTransferTokenPermission;
       "admin::user": AdminUser;
-      "api::blog.blog": ApiBlogBlog;
+      "api::contact.contact": ApiContactContact;
+      "api::our-gallery-tag.our-gallery-tag": ApiOurGalleryTagOurGalleryTag;
+      "api::our-gallery.our-gallery": ApiOurGalleryOurGallery;
+      "api::project.project": ApiProjectProject;
+      "api::service.service": ApiServiceService;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
       "plugin::i18n.locale": PluginI18NLocale;

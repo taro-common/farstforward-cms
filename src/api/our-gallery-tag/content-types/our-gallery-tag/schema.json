@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_gallery_tags",
+  "info": {
+    "singularName": "our-gallery-tag",
+    "pluralName": "our-gallery-tags",
+    "displayName": "Tag"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag_th": {
+      "type": "string"
+    },
+    "tag_en": {
+      "type": "string"
+    }
+  }
+}

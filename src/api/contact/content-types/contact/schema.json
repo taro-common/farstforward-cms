@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address_th": {
+      "type": "text"
+    },
+    "address_en": {
+      "type": "text"
+    },
+    "google_map_url": {
+      "type": "string"
+    },
+    "fackbook_url": {
+      "type": "string"
+    },
+    "line_id": {
+      "type": "string"
+    },
+    "line_url": {
+      "type": "string"
+    },
+    "instagram_url": {
+      "type": "string"
+    },
+    "whatsapp_url": {
+      "type": "string"
+    },
+    "twitter_url": {
+      "type": "string"
+    },
+    "youtube_url": {
+      "type": "string"
+    },
+    "tiktok_url": {
+      "type": "string"
+    },
+    "business_hours_th": {
+      "type": "text"
+    },
+    "business_hours_en": {
+      "type": "text"
+    },
+    "location_lat": {
+      "type": "string"
+    },
+    "location_long": {
+      "type": "string"
+    }
+  }
+}

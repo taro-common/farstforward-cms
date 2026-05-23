@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_call_to_action_call_to_actions",
+  "info": {
+    "displayName": "Call to action"
+  },
+  "options": {},
+  "attributes": {
+    "button_label_th": {
+      "type": "string",
+      "required": true
+    },
+    "button_label_en": {
+      "type": "string"
+    },
+    "link_to": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
