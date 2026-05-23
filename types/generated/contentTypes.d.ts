@@ -554,7 +554,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImNmMjM4Y2Q5LTZmNmQtNDdlYi1iMTdkLTQxMzNmMWJkMzA2OCIsImxpY2Vuc2VkSG9zdHMiOlsiY21zLmZhc3Rmb3J3YXJkc3BvcnQuY29tIiwiMTAzLjExNC4yMDMuMjIzIl0sInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiI4NzRmZDRlNCJ9.JnU_F_whvFIy9L7m6WUPUU9LfbfapB17knMoGnT8o0thsYBCYEoPGuXUUMEGBKE5PmwbbC2UOdyYJMjcjYrPkA";
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
           preset: "standard";
         }
@@ -563,7 +563,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImNmMjM4Y2Q5LTZmNmQtNDdlYi1iMTdkLTQxMzNmMWJkMzA2OCIsImxpY2Vuc2VkSG9zdHMiOlsiY21zLmZhc3Rmb3J3YXJkc3BvcnQuY29tIiwiMTAzLjExNC4yMDMuMjIzIl0sInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiI4NzRmZDRlNCJ9.JnU_F_whvFIy9L7m6WUPUU9LfbfapB17knMoGnT8o0thsYBCYEoPGuXUUMEGBKE5PmwbbC2UOdyYJMjcjYrPkA";
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
           preset: "standard";
         }
@@ -573,6 +573,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description_en: Schema.Attribute.Text;
     description_th: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<"images" | "files", true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       "oneToMany",
@@ -581,14 +582,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<"seo.seo", false>;
-    slug: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.CustomField<
-        "plugin::auto-locales-slug.auto-locales-slug",
-        {
-          pattern: "title";
-        }
-      >;
     tag: Schema.Attribute.Relation<
       "oneToOne",
       "api::our-gallery-tag.our-gallery-tag"
@@ -623,7 +616,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImNmMjM4Y2Q5LTZmNmQtNDdlYi1iMTdkLTQxMzNmMWJkMzA2OCIsImxpY2Vuc2VkSG9zdHMiOlsiY21zLmZhc3Rmb3J3YXJkc3BvcnQuY29tIiwiMTAzLjExNC4yMDMuMjIzIl0sInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiI4NzRmZDRlNCJ9.JnU_F_whvFIy9L7m6WUPUU9LfbfapB17knMoGnT8o0thsYBCYEoPGuXUUMEGBKE5PmwbbC2UOdyYJMjcjYrPkA";
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
           preset: "standard";
         }
@@ -632,7 +625,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.CustomField<
         "plugin::ckeditor.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImNmMjM4Y2Q5LTZmNmQtNDdlYi1iMTdkLTQxMzNmMWJkMzA2OCIsImxpY2Vuc2VkSG9zdHMiOlsiY21zLmZhc3Rmb3J3YXJkc3BvcnQuY29tIiwiMTAzLjExNC4yMDMuMjIzIl0sInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiI4NzRmZDRlNCJ9.JnU_F_whvFIy9L7m6WUPUU9LfbfapB17knMoGnT8o0thsYBCYEoPGuXUUMEGBKE5PmwbbC2UOdyYJMjcjYrPkA";
+          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
           output: "HTML";
           preset: "standard";
         }
@@ -644,6 +637,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     description_th: Schema.Attribute.String;
     has_action_button: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+    image: Schema.Attribute.Media<"images">;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       "oneToMany",
@@ -652,14 +646,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<"seo.seo", false>;
-    slug: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.CustomField<
-        "plugin::auto-locales-slug.auto-locales-slug",
-        {
-          pattern: "title";
-        }
-      >;
     tag: Schema.Attribute.Relation<
       "oneToOne",
       "api::our-gallery-tag.our-gallery-tag"
