@@ -16,6 +16,24 @@
     },
     "tag_en": {
       "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "tag"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "tag"
+    },
+    "our_galleries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::our-gallery.our-gallery",
+      "mappedBy": "tag"
     }
   }
 }

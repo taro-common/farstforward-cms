@@ -32,8 +32,9 @@
     },
     "tag": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::our-gallery-tag.our-gallery-tag"
+      "relation": "manyToOne",
+      "target": "api::our-gallery-tag.our-gallery-tag",
+      "inversedBy": "our_galleries"
     }
   }
 }

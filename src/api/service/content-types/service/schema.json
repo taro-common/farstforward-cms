@@ -36,8 +36,9 @@
     },
     "tag": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::our-gallery-tag.our-gallery-tag"
+      "relation": "manyToOne",
+      "target": "api::our-gallery-tag.our-gallery-tag",
+      "inversedBy": "services"
     },
     "description_th": {
       "type": "string"
