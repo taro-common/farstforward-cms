@@ -552,20 +552,16 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   attributes: {
     content_en: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
-        "plugin::ckeditor.CKEditor",
+        "plugin::ckeditor5.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
-          output: "HTML";
-          preset: "light";
+          preset: "defaultHtml";
         }
       >;
     content_th: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
-        "plugin::ckeditor.CKEditor",
+        "plugin::ckeditor5.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
-          output: "HTML";
-          preset: "light";
+          preset: "defaultHtml";
         }
       >;
     createdAt: Schema.Attribute.DateTime;
@@ -614,20 +610,16 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     action: Schema.Attribute.Component<"call-to-action.call-to-action", false>;
     content_en: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
-        "plugin::ckeditor.CKEditor",
+        "plugin::ckeditor5.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
-          output: "HTML";
-          preset: "light";
+          preset: "defaultHtml";
         }
       >;
     content_th: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
-        "plugin::ckeditor.CKEditor",
+        "plugin::ckeditor5.CKEditor",
         {
-          licenseKey: "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE4MTExMTY3OTksImp0aSI6ImY3ZmU3NmVmLTZhOWItNDgzMi1iMjkwLTc4MmE4M2ZhZTI1MiIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCIsIkUyUCIsIkUyVyJdLCJyZW1vdmVGZWF0dXJlcyI6WyJQQiIsIlJGIiwiU0NIIiwiVENQIiwiVEwiLCJUQ1IiLCJJUiIsIlNVQSIsIkI2NEEiLCJMUCIsIkhFIiwiUkVEIiwiUEZPIiwiV0MiLCJGQVIiLCJCS00iLCJGUEgiLCJNUkUiXSwidmMiOiIzZjQwZDliOSJ9.vFWyo6YSAbLPC3LQze0Q8bkOAyCjlZJbUxDMgRLsDtq1HHXVKD7F68BivGImuzXikROB1m8lsSzBI-_c1J_8mQ";
-          output: "HTML";
-          preset: "light";
+          preset: "defaultHtml";
         }
       >;
     createdAt: Schema.Attribute.DateTime;
