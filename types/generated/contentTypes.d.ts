@@ -631,8 +631,8 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
-    description_en: Schema.Attribute.String;
-    description_th: Schema.Attribute.String;
+    description_en: Schema.Attribute.Text;
+    description_th: Schema.Attribute.Text;
     has_action_button: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     image: Schema.Attribute.Media<"images">;
