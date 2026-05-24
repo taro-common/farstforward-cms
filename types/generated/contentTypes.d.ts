@@ -495,7 +495,13 @@ export interface ApiOurGalleryTagOurGalleryTag
       "api::our-gallery-tag.our-gallery-tag"
     > &
       Schema.Attribute.Private;
+    our_galleries: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::our-gallery.our-gallery"
+    >;
+    projects: Schema.Attribute.Relation<"oneToMany", "api::project.project">;
     publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Relation<"oneToMany", "api::service.service">;
     tag_en: Schema.Attribute.String;
     tag_th: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -528,7 +534,7 @@ export interface ApiOurGalleryOurGallery extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     tag: Schema.Attribute.Relation<
-      "oneToOne",
+      "manyToOne",
       "api::our-gallery-tag.our-gallery-tag"
     >;
     title_en: Schema.Attribute.String & Schema.Attribute.Required;
@@ -579,7 +585,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<"seo.seo", false>;
     tag: Schema.Attribute.Relation<
-      "oneToOne",
+      "manyToOne",
       "api::our-gallery-tag.our-gallery-tag"
     >;
     title: Schema.Attribute.String &
@@ -639,7 +645,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<"seo.seo", false>;
     tag: Schema.Attribute.Relation<
-      "oneToOne",
+      "manyToOne",
       "api::our-gallery-tag.our-gallery-tag"
     >;
     title: Schema.Attribute.String &
