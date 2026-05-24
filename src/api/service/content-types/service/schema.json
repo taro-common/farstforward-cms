@@ -41,10 +41,10 @@
       "inversedBy": "services"
     },
     "description_th": {
-      "type": "string"
+      "type": "text"
     },
     "description_en": {
-      "type": "string"
+      "type": "text"
     },
     "content_th": {
       "type": "customField",
