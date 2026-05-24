@@ -24,7 +24,7 @@
       "type": "text"
     },
     "google_map_url": {
-      "type": "string"
+      "type": "text"
     },
     "fackbook_url": {
       "type": "string"

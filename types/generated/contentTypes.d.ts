@@ -450,7 +450,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
     fackbook_url: Schema.Attribute.String;
-    google_map_url: Schema.Attribute.String;
+    google_map_url: Schema.Attribute.Text;
     instagram_url: Schema.Attribute.String;
     line_id: Schema.Attribute.String;
     line_url: Schema.Attribute.String;
