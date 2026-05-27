@@ -482,7 +482,7 @@ export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
     singularName: "milestone";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     content_en: Schema.Attribute.RichText &
@@ -517,7 +517,7 @@ export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
-    year: Schema.Attribute.Integer;
+    year: Schema.Attribute.Integer & Schema.Attribute.Required;
   };
 }
 
@@ -600,7 +600,7 @@ export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
     singularName: "partner";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -748,7 +748,7 @@ export interface ApiSubmitFormSubmitForm extends Struct.CollectionTypeSchema {
     singularName: "submit-form";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;

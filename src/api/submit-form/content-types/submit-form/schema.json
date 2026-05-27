@@ -7,7 +7,7 @@
     "displayName": "Submit Form"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

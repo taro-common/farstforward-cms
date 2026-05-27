@@ -7,7 +7,7 @@
     "displayName": "Milestone"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -34,7 +34,8 @@
       "type": "text"
     },
     "year": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "content_th": {
       "type": "customField",
