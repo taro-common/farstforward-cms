@@ -449,7 +449,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
-    fackbook_url: Schema.Attribute.String;
+    facebook_url: Schema.Attribute.String;
     google_map_url: Schema.Attribute.Text;
     instagram_url: Schema.Attribute.String;
     line_id: Schema.Attribute.String;
@@ -471,6 +471,53 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     whatsapp_url: Schema.Attribute.String;
     youtube_url: Schema.Attribute.String;
+  };
+}
+
+export interface ApiMilestoneMilestone extends Struct.CollectionTypeSchema {
+  collectionName: "milestones";
+  info: {
+    displayName: "Milestone";
+    pluralName: "milestones";
+    singularName: "milestone";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content_en: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    content_th: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    description_en: Schema.Attribute.Text;
+    description_th: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::milestone.milestone"
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title_en: Schema.Attribute.String;
+    title_th: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    year: Schema.Attribute.Integer;
   };
 }
 
@@ -539,6 +586,37 @@ export interface ApiOurGalleryOurGallery extends Struct.CollectionTypeSchema {
     >;
     title_en: Schema.Attribute.String & Schema.Attribute.Required;
     title_th: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
+  collectionName: "partners";
+  info: {
+    displayName: "Partner";
+    pluralName: "partners";
+    singularName: "partner";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    images: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios",
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::partner.partner"
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
@@ -656,6 +734,38 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       }>;
     title_en: Schema.Attribute.String & Schema.Attribute.Required;
     title_th: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSubmitFormSubmitForm extends Struct.CollectionTypeSchema {
+  collectionName: "submit_forms";
+  info: {
+    displayName: "Submit Form";
+    pluralName: "submit-forms";
+    singularName: "submit-form";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::submit-form.submit-form"
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    service: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
@@ -1213,10 +1323,13 @@ declare module "@strapi/strapi" {
       "admin::transfer-token-permission": AdminTransferTokenPermission;
       "admin::user": AdminUser;
       "api::contact.contact": ApiContactContact;
+      "api::milestone.milestone": ApiMilestoneMilestone;
       "api::our-gallery-tag.our-gallery-tag": ApiOurGalleryTagOurGalleryTag;
       "api::our-gallery.our-gallery": ApiOurGalleryOurGallery;
+      "api::partner.partner": ApiPartnerPartner;
       "api::project.project": ApiProjectProject;
       "api::service.service": ApiServiceService;
+      "api::submit-form.submit-form": ApiSubmitFormSubmitForm;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
       "plugin::i18n.locale": PluginI18NLocale;

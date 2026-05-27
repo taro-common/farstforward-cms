@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submit_forms",
+  "info": {
+    "singularName": "submit-form",
+    "pluralName": "submit-forms",
+    "displayName": "Submit Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

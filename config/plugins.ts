@@ -57,7 +57,7 @@ export default ({ env }) => {
     "webp-converter": {
       enabled: true,
       config: {
-        mimeTypes: undefined,
+        mimeTypes: ["image/jpeg", "image/png", "image/webp"],
       },
     },
     publisher: {

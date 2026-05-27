@@ -26,7 +26,7 @@
     "google_map_url": {
       "type": "text"
     },
-    "fackbook_url": {
+    "facebook_url": {
       "type": "string"
     },
     "line_id": {
