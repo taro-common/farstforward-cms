@@ -448,7 +448,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email;
+    email: Schema.Attribute.Text;
     facebook_url: Schema.Attribute.String;
     google_map_url: Schema.Attribute.Text;
     instagram_url: Schema.Attribute.String;
