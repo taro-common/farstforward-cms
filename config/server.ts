@@ -1,7 +1,7 @@
 export default ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
-  url: env('PUBLIC_URL', 'https://cms.fastforward-sport.com'),
+  url: env('PUBLIC_URL', 'https://cms.fastforwardsport.com'),
   proxy: env.bool('IS_PROXIED', true),
   app: {
     keys: env.array('APP_KEYS'),
